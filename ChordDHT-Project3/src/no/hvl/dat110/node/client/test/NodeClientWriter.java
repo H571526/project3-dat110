@@ -1,6 +1,15 @@
 package no.hvl.dat110.node.client.test;
 
 import java.math.BigInteger;
+
+
+/**
+ * exercise/demo purpose in dat110
+ * @author tdoy
+ *
+ */
+
+
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.Registry;

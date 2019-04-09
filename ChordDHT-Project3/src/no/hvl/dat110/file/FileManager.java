@@ -92,6 +92,7 @@ public class FileManager extends Thread {
 	 */
 	public Set<Message> requestActiveNodesForFile(String filename) throws RemoteException {
 		
+		Set<Message> msgs = new HashSet<Message>();
 		// generate the N replica keyids from the filename
 
 		// create replicas
@@ -113,7 +114,8 @@ public class FileManager extends Thread {
 				}
 			}
 		}
-		return nodes; // return value is a Set of type Message
+		return nodes; // return value is a Set of type Message	
+
 	}
 
 	private boolean checkDuplicateActiveNode(Set<Message> activenodesdata, Message nodetocheck) {
@@ -210,6 +212,7 @@ public class FileManager extends Thread {
 			chordnode.releaseLocks();
 		}
 		return message.isAcknowledged(); 
+
 
 	}
 
